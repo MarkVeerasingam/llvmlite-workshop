@@ -35,12 +35,20 @@ def compile_ir(engine, llvm_ir):
 engine = create_execution_engine()
 mod = compile_ir(engine, llvm_ir)
 
+# === Get function pointers and wrap with ctypes ===
+
+# === Square === #
 # Get function pointer to 'square'
-func_ptr = engine.get_function_address("square")
+square_ptr = engine.get_function_address("square")
 
 # Convert to callable Python function
-c_square = ctypes.CFUNCTYPE(ctypes.c_int32, ctypes.c_int32)(func_ptr)
+c_square = ctypes.CFUNCTYPE(ctypes.c_int32, ctypes.c_int32)(square_ptr)
+
+# === Cube === #
+# == Your Code Goes Here == #
 
 # === Test ===
-x = 6
-print(f"square({x}) = {c_square(x)}")  # Output: square(6) = 36
+x = 4
+print(f"square({x}) = {c_square(x)}")  # Output: square(4) = 16
+
+# Remember to test for Cube too!
