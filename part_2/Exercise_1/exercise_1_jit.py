@@ -37,7 +37,7 @@ mod = compile_ir(engine, llvm_ir)
 # Get pointer to compiled 'multiply' function
 """
 Hint:
-This is where we are getting the pointer to the compiled function. Check the naming of this and what we called the name of the function inside mul_ir.py
+This is where we are getting the pointer to the compiled function. Check the naming of this and what we called the name of the function inside exercise_1.py
 """
 func_ptr = engine.get_function_address("mul")
 

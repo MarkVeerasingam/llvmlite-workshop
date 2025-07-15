@@ -20,6 +20,7 @@ builder = ir.IRBuilder(block)
 Hint:
 This is where issue 1 is.
 Look at the method that builder is calling, is it performing the correct multiplication we need for our expected input data types?
+We are expected to multipy int 32, is the code below multiply int?
 """
 result = builder.fmul(x, y, name="sum")
 builder.ret(result)
