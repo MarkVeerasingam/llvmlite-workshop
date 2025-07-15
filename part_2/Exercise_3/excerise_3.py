@@ -2,11 +2,9 @@ import os
 import llvmlite.binding as llvm
 import ctypes
 
-# Path to IR file (ensure this matches your actual file path)
+# read in llvm file
 current_dir = os.path.dirname(os.path.abspath(__file__))
 ll_path = os.path.join(current_dir, "square_ir.ll")
-
-# Read the LLVM IR from file
 with open(ll_path) as f:
     llvm_ir = f.read()
 
