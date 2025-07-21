@@ -1,6 +1,6 @@
 from llvmlite import ir
 
-# Create an LLVM module (think of this as a translation unit) 
+# Create an LLVM module. Remember we said this was like a source file or better termed, a translation unit.
 module = ir.Module(name="add_module")
 
 # Define the function type: int add(int a, int b)

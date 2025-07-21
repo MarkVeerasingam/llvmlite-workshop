@@ -46,4 +46,23 @@ This just means nobody should be able to jump to middle of a basic block.
 
 Using this knowledge, lets look back again now. We want to know if the final basic block is `z` is `=` to `y1` or `y2`
 
+below we can look at the example where we know that y has to be either of 
+- the left hand branch (edge 1) where z assigns `y1`
+- the right hand branch (edge 2) where z assigns `y2`
+
 ![SSA Example 2](ssa_example.png)
+
+### Lets just think about this
+
+Just thinking about it, what do you think should about to `z`. We know `z = x2 + y?`. This isn't maths probality, just think back to basic logic, OR gates.
+
+`y?` must have a way to define if it is going to be `y1` or `y2`, but how?
+
+Remember: we cannot jump into a basic block mid way through. They follow single-entry, single-exit.
+
+## Phi-nodes / Phi-functions
+
+![SSA Example 1](ssa_example_3.png)
+
+- φ function chooses the version depending on the incoming edge.
+- Present **only at the beginning** of a basic block
