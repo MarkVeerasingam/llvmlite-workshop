@@ -2,6 +2,8 @@
 
 This folder is part of the onboarding workshop to help you get comfortable with how LLVM works — before we dive into using `llvmlite`.
 
+[LLVM in 100 seconds - Fireship](https://www.youtube.com/watch?v=BT2Cv-Tjq7Q&t=26s)
+
 ---
 
 ## TL;DR: What is LLVM?

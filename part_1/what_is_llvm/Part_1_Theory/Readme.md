@@ -31,6 +31,9 @@ SSA makes it easier for compilers to:
 
 Lets look at this below.
 
+Referenced from:
+[Compiler Design Module 70 : Static Single Assignment IR - compilerai](https://www.youtube.com/watch?v=uqTT3gI7KU8)
+
 ![SSA Example](ssa_example_2.png)
 
 We cannot answer this without knowing
