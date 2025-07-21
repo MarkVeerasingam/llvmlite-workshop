@@ -42,5 +42,7 @@ func_ptr = engine.get_function_address("mixed_multiply")
 cfunc = ctypes.CFUNCTYPE(ctypes.c_float, ctypes.c_int32, ctypes.c_float)(func_ptr)
 
 # Call function
-result = cfunc(5, 2.5)
-print("mixed_multiply(5, 2.5) =", result)
+arg_a = 5
+arg_b = 2.5
+result = cfunc(arg_a, arg_b)
+print(f"mixed_multiply({arg_a}, {arg_b}) = {result}")

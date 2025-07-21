@@ -11,4 +11,4 @@ This is expected. Inside exercise_1_jit.py, you will find that the issue is with
 
 ### Recommended Documentation:
 - Example—defining a simple function: https://llvmlite.readthedocs.io/en/latest/user-guide/ir/examples.html
-- 
+

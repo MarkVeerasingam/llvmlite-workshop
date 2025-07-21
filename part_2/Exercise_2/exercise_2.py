@@ -22,19 +22,31 @@ builder = ir.IRBuilder(block)
 
 """
 # TODO:
-- 1) Convert int32 to float (float type to match multiplication type)
+- 1) Convert int32 to float 
 - 2) Then multiply using fmul
+- 3) return builder.ret(result)
 
 - Hint: use builder.sitofp() to convert signed int to float
+-- sitofp() == Signed Integer to Floating point
 
-- Hint: within the function sitofp(), you will see various arguments. Remember that the integer we are converting to float is the LHS, int_arg. 
+- Hint: within the function sitofp(), you will see various arguments. Remember that the integer we are converting to float is on the Left-Hand-Side (LHS), line 11. 
 - So we need to tell sitofp() that the value is int_arg and typ to be of Float IR.
 -> value: Any,
     typ: Any,
     name: str = ''
+
+# Note:
+Function type: float multiply(int a, float b)
+- We are converting int a to float. So we are doing int32
 """
 
 # ** YOUR CODE GOES HERE **
+
+# 1. Convert the int32 argument to float
+
+# 2. Multiply the converted float with the float argument
+
+# 3. Return the result
 
 # Write IR to file
 current_dir = os.path.dirname(os.path.abspath(__file__))

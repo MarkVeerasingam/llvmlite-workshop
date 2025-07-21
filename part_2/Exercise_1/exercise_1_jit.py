@@ -45,5 +45,7 @@ func_ptr = engine.get_function_address("mul")
 cfunc = ctypes.CFUNCTYPE(ctypes.c_int32, ctypes.c_int32, ctypes.c_int32)(func_ptr)
 
 # Call function
-result = cfunc(7, 5)
-print("mul(7, 5) =", result)
+arg_a = 7
+arg_b = 5
+result = cfunc(arg_a, arg_b)
+print(f"mixed_multiply({arg_a}, {arg_b}) = {result}")
