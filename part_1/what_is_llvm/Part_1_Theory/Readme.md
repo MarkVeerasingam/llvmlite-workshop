@@ -1,4 +1,4 @@
-# Exercise 2: Understanding SSA (Static Single Assignment)
+# Theory: Understanding SSA (Static Single Assignment)
 
 What is SSA?
 In LLVM and in general IR, every variable is assigned exactly once. This is called Static Single Assignment (SSA) form.
