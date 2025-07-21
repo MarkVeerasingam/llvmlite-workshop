@@ -2,14 +2,14 @@ import os
 import llvmlite.binding as llvm
 import ctypes
 
-# Path to the .ll file 
+# Path to the .ll file, in this case it is add.ll from our current dir
 current_dir = os.path.dirname(os.path.abspath(__file__))
 ll_path = os.path.join(current_dir, "add.ll")
 
 # Initialize LLVM
-llvm.initialize()
-llvm.initialize_native_target()
-llvm.initialize_native_asmprinter()
+llvm.initialize()                       # Initialize core LLVM components
+llvm.initialize_native_target()         # Initialize target info for the current machine
+llvm.initialize_native_asmprinter()     # Initialize native assembly printer (needed for JIT)
 
 # Load IR
 with open(ll_path) as f:
